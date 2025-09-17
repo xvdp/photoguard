@@ -13,7 +13,7 @@ gr.close_all()
 topil = ToPILImage()
 
 pipe_inpaint = StableDiffusionInpaintPipeline.from_pretrained(
-    "runwayml/stable-diffusion-inpainting",
+    "stable-diffusion-v1-5/stable-diffusion-inpainting",
     revision="fp16",
     torch_dtype=torch.float16,
     safety_checker=None,
