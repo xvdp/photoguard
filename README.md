@@ -29,15 +29,14 @@ Our code relies on the [stable diffusion code on Hugging Face](https://github.co
 
 1.  Clone our repo: `git clone https://github.com/madrylab/photoguard.git`
 
-2.  Install dependencies: (note: dependency versions frozen to ensure ~Dec 2022 behaviour)
+2.  Install dependencies: updated to current versions. Tested w torch 2.8 cuda 12.8 diffusers 0.35
 
     ``` bash
-    mamba create --name photoguard  python=3.13.2 numpy=2.2.4 jupyter scipy matplotlib
+    conda create --name photoguard python numpy jupyter scipy matplotlib
     conda activate photoguard
-    pip install -r requirements.txt -c $CONDA_PREFIX/constraints.txt
+    pip install -r requirements.txt
     huggingface-cli login
     ```
-    Note: to keep track of hugging face models `export HUGGINGFACE_HOME="path/to/huggingface_models"`
 
 3.  You should now be all set! Check out our notebooks!
 
