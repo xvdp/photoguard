@@ -32,15 +32,12 @@ Our code relies on the [stable diffusion code on Hugging Face](https://github.co
 2.  Install dependencies: (note: dependency versions frozen to ensure ~Dec 2022 behaviour)
 
     ``` bash
-    mamba create --name photoguard  python=3.10 numpy=1.23.5 jupyter scipy matplotlib
+    mamba create --name photoguard  python=3.13.2 numpy=2.2.4 jupyter scipy matplotlib
     conda activate photoguard
-    # pip will install the latest if one does not constrain it.
-    echo "diffusers==0.10.2 transformers==4.25.1 huggingface-hub==0.11.1 numpy<=1.26.4 accelerate==0.15.0" > $CONDA_PREFIX/constraints.txt
-    # spacify the torch versions fully, mamba install of torch v 1.12 had cuda issues
-    pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113 -c $CONDA_PREFIX/constraints.txt
     pip install -r requirements.txt -c $CONDA_PREFIX/constraints.txt
     huggingface-cli login
     ```
+    Note: to keep track of hugging face models `export HUGGINGFACE_HOME="path/to/huggingface_models"`
 
 3.  You should now be all set! Check out our notebooks!
 
